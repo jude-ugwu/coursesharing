@@ -1,0 +1,92 @@
+
+header{
+    background-image: url(images/image30.jpg);
+    height: 70vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.nav-bar li a{
+    color: var(---bg-white);
+    text-shadow: 1px 2px #000;
+}
+
+.courses-link-cont{
+    padding: 6rem;
+     color: var(---bg-white);
+}
+
+
+.courses-link-cont > p{
+    font-size: 4rem;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.courses-link{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.courses-link p > a{
+    color: var(---bg-white);
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.courses-list-cont{
+    border: 1px solid black;
+}
+
+.courses-list{
+    background: #dbdbdb;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    position: relative;
+}
+
+.courses-list-item{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.courses-list-icon{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icon-list{
+    font-size: 1.1rem;
+}
+
+.courses-filter-dd{
+    background: var(---bg-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.angle-down-icon{
+    font-size: 1.5rem;
+}
+
+.courses-filter-content{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(---bg-white);
+    position: absolute;
+    width: 150px;
+    border: 1px solid black;
+}

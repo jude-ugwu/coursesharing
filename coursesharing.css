@@ -32,6 +32,10 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     line-height: 1.6;
+    position: relative;
+    /* border: 1px solid black; */
+    /* width: fit-content; */
+    /* min-width: 500vw; */
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -65,12 +69,12 @@ body {
   }
 
   section{
-    padding: 1rem 7rem;
+    padding: 1rem 6.5rem;
     /* border: 1px solid black; */
   }
 
   .container{
-    margin: 6rem auto 3rem;
+    margin: 7rem auto 5rem;
     /* border: 1px solid black; */
   }
 
@@ -110,12 +114,14 @@ it is use to give style to specific element inside a navbar with a scroll effect
   header{
     background-color: var(---bg-primary);
     position: relative;
+    width: 100%;
   }
   nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 2rem;
+    width: 100%;
   }
   .nav-left{
     display: flex;
@@ -158,7 +164,7 @@ it is use to give style to specific element inside a navbar with a scroll effect
   .category-dd:hover .category-content{
     opacity: 1;
     transform: translateY(-20px);
-    pointer-events: auto;
+    pointer-events:auto;
   }
 
   .category-content > a{
@@ -177,6 +183,7 @@ it is use to give style to specific element inside a navbar with a scroll effect
   .web-logo{
     border-right: 1px solid black;
     padding-right: 1rem;
+    cursor: pointer;
   }
 
   .nav-bar{
@@ -217,8 +224,13 @@ it is use to give style to specific element inside a navbar with a scroll effect
     border-radius: 3px;
     background: var(---bg-white);
     outline: none;
-    transition: .5s ease-in-out;
+    transition: all 100ms ease;
     pointer-events: auto;
+    border: none;
+  }
+
+  .hamburger-menue{
+    display: none;
   }
 
   /* you can also use the focus-within css property to achieve this too */
@@ -332,7 +344,7 @@ it is use to give style to specific element inside a navbar with a scroll effect
     left: 0;
     overflow: hidden;
     transform: translateX(-100%);
-    z-index: -1;
+    z-index: -1; 
     pointer-events: none;
     transition: none;
   }
@@ -376,6 +388,7 @@ it is use to give style to specific element inside a navbar with a scroll effect
   .hero-section{
     /* border: 1px solid black; */
     margin-top: -8rem;
+    width: 100%;
   }
 
   .hero-container{
@@ -388,26 +401,27 @@ it is use to give style to specific element inside a navbar with a scroll effect
 
   .hero-left{
     /* border: 1px solid black; */
-    height: 400px;
+    /* height: 400px; */
   }
 
   .hero-left h1{
-    font-size: 3rem;
+    font-size: 3.5vw;
     line-height: 1.2;
     font-weight: 800;
     margin-bottom: .8rem;
     color: var(---color);
   }
 
-  .hero-left .hero-less{
+  .hero-less{
     font-weight: 100;
   }
 
   .hero-left p{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 600;
     margin-bottom: 1.7rem;
     color: var(---color);
+    
   }
 
   .hero-image{
@@ -476,7 +490,7 @@ it is use to give style to specific element inside a navbar with a scroll effect
     position: fixed;
     top: 0;
     width: 340px;
-    height: 700px;
+    height: 100%;
     background: var(---bg-white);
     z-index: 30;
     right: 0;
@@ -605,6 +619,7 @@ it is use to give style to specific element inside a navbar with a scroll effect
     padding: .5rem 3rem;
     border-radius: var(---radius-btn);
     transition: all 600ms ease;
+    width: 100%;
   }
 
   .course-cate-data:hover {
@@ -638,6 +653,12 @@ it is use to give style to specific element inside a navbar with a scroll effect
     transition: 400ms;
   }
 
+
+
+
+
+  /* EXTRA CATEGORY SECTION  */
+
   .extra-category-cont{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -649,6 +670,7 @@ it is use to give style to specific element inside a navbar with a scroll effect
     background-position: center;
     background-size: cover;
     height: 16rem;
+    width: 100%;
     border-radius: var(---radius-btn);
     padding: 3rem 2.5rem;
   }
@@ -683,7 +705,7 @@ it is use to give style to specific element inside a navbar with a scroll effect
     font-weight: bolder;
     font-family: Arial, Helvetica, sans-serif;
     transition: all 500ms ease;
-    width: 300px;
+    width: 100%;
   }
 
   .extra-category .extra-text:hover{
@@ -867,7 +889,7 @@ it is use to give style to specific element inside a navbar with a scroll effect
   }
 
   .courses-image{
-    height: 200px;
+    height: 33vh;
     overflow: hidden;
     border-radius: 5px 5px 0 0;
   }
@@ -1071,7 +1093,7 @@ it is use to give style to specific element inside a navbar with a scroll effect
     grid-template-columns: repeat(2, 1fr);
     padding: 0 4rem 7rem;
     gap: 6rem;
-    place-items: center;
+    /* place-items: center; */
   }
 
   .master-left{
@@ -1079,13 +1101,15 @@ it is use to give style to specific element inside a navbar with a scroll effect
   }
 
   .master-image{
-    width: 370px;
+    width: 100%;
     height: 450px;
     border-radius: 8px;
+    
   }
   .master-image img{
     object-position: left;
     border-radius: 8px;
+    
   }
 
   .master-info{
@@ -1141,7 +1165,7 @@ it is use to give style to specific element inside a navbar with a scroll effect
     height: 3rem;
     width: 7rem;
     position: absolute;
-    width: 170px;
+    width: 130px;
   }
   .master-stud-img-cont p{
     margin-top: 2.5rem;
@@ -1334,6 +1358,9 @@ it is use to give style to specific element inside a navbar with a scroll effect
 
   /* END OF AHCHEIVEMENT SECTION */
 
+
+
+
 footer{
   background: var(---bg-footer);
   color: #999999;
@@ -1469,11 +1496,11 @@ footer{
 
   .footer-hanger{
     height: 215px;
-    width: 83%;
+    width: 85vw;
     background: blue;
     position: absolute;
     top: -20%;
-    left: 9%;
+    left: 7%;
     border-radius: 10px;
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -1499,6 +1526,9 @@ footer{
 
   .footer-hanger h2{
     text-align: left;
+    color: var(---bg-white);
+    font-size: 3vw;
+    width: 100%;
   }
 
   .foot-btn-cont{
@@ -1512,6 +1542,769 @@ footer{
     color: var(---bg-dark);
     background: var(---bg-white);
     margin-inline: auto;
-    margin: 3rem 0 0 8rem;
+    margin: 3rem 0 0 8rem; 
+  }
+
+
+
+  /* navigation proxy */
+
+  .rspv-nav-bar{
+    display: none;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* responsiveness at screen size of 1199 */
+
+  @media (width<=1199px) {
+    section{
+      padding: 1rem 3.5vw;
+    }
+
+    h2{
+      text-align: left;
+    }
+
+
+    h1{
+      font-size: .5rem;
+    }
+
+    .hamburger-menue{
+      font-size: 2.5rem;
+      color: var(---bg-btn);
+      display: block;
+      cursor: pointer;
+    }
+
+    .nav-bar{
+      display: none;
+    }
+
+    .rspv-nav-bar{
+      position: fixed;
+      /* border: 1px solid black; */
+      right: -1500px;
+      top: 0;
+      width:60%;
+      height: 100%;
+      background-color: var(---bg-white);
+      z-index: 5;
+      display: block;
+      padding: 2.5rem 2rem 0;
+      overflow: auto;
+      /* transform: translateX(400px); */
+      transition: all 600ms ease;
+      z-index: 30;
+       box-shadow: 2px 2px 10px 10px rgba(0, 0, 0, 0.20);
+    }
+
+    .rspv-nav{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      /* border: 1px solid black; */
+    }
+
+    .rspv-nav .web-logo{
+      border: none;
+      width: 185px;
+    }
+
+    .expand{
+      border: 1px solid black;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      border-radius: 50%;
+      padding-top: .5rem;
+      transition: all 350ms ease;
+      margin-inline: auto;
+      overflow: hidden;
+      cursor: pointer;
+      
+    }
+
+    .expand:hover p{
+      transform: translateY(-25px);
+      font-size: .9rem;
+      font-weight: bolder;
+    }
+
+    .expand:hover .rspv-navbar-icon{
+      transform: translateY(-30px);
+    }
+
+    .expand p, .rspv-navbar-icon{
+      transition: all 400ms ease-in-out;
+      pointer-events: none;
+    }
+
+
+    .rspv-icon{
+      width: 80px;
+      
+    }
+
+    .expand:hover{
+      border-radius: 1px;
+      width: 100%;
+
+    }
+
+    .rspv-navbar-icon{
+      font-size: 1rem;
+      display: block;
+
+    }
+
+    .rspv-nav-bar ul{
+      margin-top: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .rspv-nav-bar li{
+      list-style: none;
+      border-bottom: 1px solid black;
+      width: 100%;
+      padding: .3rem;
+      cursor: pointer;
+    }
+
+    .rspv-dd{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: .5rem 0;
+      transition: all 400ms ease;
+    }
+
+    .rspv-dd:hover{
+      color: var(---bg-btn);
+    }
+
+    .rspv-dd .carat-down{
+      font-size: 1.6rem;
+    }
+
+    .rspv-dd-cont{
+      height: 0px;
+      overflow: hidden;
+      transition: 400ms;
+      opacity: 0;
+    }
+
+
+    .rspv-nav-link{
+      display: block;
+      font-weight: bolder;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .8rem;
+      border-top: 1px solid var(---bg-dark);
+      width: 98%;
+      margin-left: 1.5rem;
+      padding: .8rem 0;
+      transition: all 400ms ease;
+    }
+
+    .rspv-nav-link::before{
+      content: "";
+      display: inline-block;
+      border: 2px solid var(---bg-dark);
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      margin-right: .5rem;
+      transition: all 400ms ease;
+    }
+
+    .rspv-nav-link:hover{
+      transform: translateX(5px);
+      color: var(---bg-btn);
+    }
+
+    .rspv-nav-link:hover::before{
+      background: var(---bg-btn);
+      border: 2px solid var(---bg-btn);
+    }
+
+  
+    .carat-rotate{
+      transform: rotate(-90deg);
+    }
+
+    .rspv-dd > span{
+      font-weight: bolder;
+      font-size: .8rem;
+      cursor: pointer;
+      transition: all 400ms ease;
+    }
+
+    .rspv-dd:hover span{
+      transform: translateX(5px);
+    }
+
+
+    ul{
+      /* border: 1px solid black; */
+    }
+
+    .rspv-nav-input{
+      /* border: 1px solid black; */
+      padding: 1.4rem;
+      outline: none;
+      border: none;
+      background: #e7e7e7;
+      width: 200px;
+    }
+
+    .rspv-nav-input[placeholder]{
+      font-size: .9rem;
+      font-weight: bolder;
+    }
+
+    .rspv-search-cart{
+      /* border: 1px solid black; */
+      height: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      outline: none;
+      border-radius: var(---radius-btn);
+      background: #e7e7e7;
+      padding: 0 1rem;
+      margin: 2.5rem 0 8rem;
+    }
+
+    .rspv-search-cart:focus-within{
+       outline: 1.7px solid var(---bg-btn);
+    }
+
+    .rspv-search-icon{
+      font-size: 1.2rem;
+    }
+
+     .rspv-page-overlay{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.50);
+    visibility: hidden;
+    opacity: 0;
+    z-index: 17;
+    transition: 500ms;
+  }
+
+
+  /* rspv hero section */
+
+.hero-second-image{
+  top: -100px;
+}
+
+.hero-anime{
+  top: 95%;
+  left: 70%;
+}
+
+.hero-left h1{
+  font-size: 2.5rem;
+}
+
+.course-cate-data{
+  padding: 0 1rem;
+}
+
+/* master secton  */
+.banner-info{
+  left: -95px;
+}
+
+
+
+/* testimonial section  */
+
+.mySwiper h2{
+  text-align: center;
+}
+
+
+/* footer section  */
+footer h2{
+  font-size: 1.7rem;
+}
+
+  }
+
+
+
+
+ /* responsiveness at screen size of 991 */
+  @media (width<=991px){
+    section{
+      padding: 1rem 6vw;
+     
+    }
+
+    /* .rspv-nav-bar{
+      width: 70%;
+    } */
+
+    .category-dd{
+      display: none;
+     }
+ 
+     .web-logo{
+       border: none;
+       padding-right: 1rem;
+       cursor: pointer;
+     }
+
+     nav{
+      height: 100px;
+     }
+
+
+    /* hero section  */
+    .hero-container{
+      gap: .5rem;
+    }
     
+.hero-left h1{
+  font-size: 3vw;
+}
+
+.hero-left p{
+  font-size: 2vw;
+}
+
+
+.hero-second-image{
+  display: none;
+}
+
+.hero-image{
+  width: 300px;
+  height: 350px;
+}
+
+.hero-anime{
+  top: 90%;
+  left: 65%;
+}
+
+/* course category section  */
+
+.course-cate-grid{
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.course-cate-data{
+  padding: .5rem .5rem;
+ width: 100%;
+}
+
+.course-cate-left h2{
+  text-align: left;
+}
+
+.course-cate-left{
+  margin-bottom: 1rem;
+}
+
+
+
+
+/* service section  */
+
+.service-article-cont{
+  grid-template-columns: repeat(2, 1fr);
+  
+}
+
+.service-text p{
+  text-align: left;
+}
+
+
+/* course section  */
+
+.courses-container h2{
+  text-align: left;
+}
+
+.text-button-cont{
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4rem;
+  margin-bottom: -1rem;
+}
+
+
+.courses-cont{
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  place-content: center;
+}
+
+.courses{
+  width: 100%;
+}
+
+.course-action{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10rem;
+  padding: 1rem;
+  position: absolute;
+  top:0;
+  right: -23px;
+  width: 400px;
+}
+
+/* master course section  */
+
+.master-container{
+  grid-template-columns: 1fr;
+  gap: 9rem;
+}
+
+.master-info h2{
+  text-align: left;
+  word-wrap: break-word;
+  width: 100%;
+}
+
+
+/* footer section */
+
+footer h2{
+  font-size: 1.6rem;
+}
+
+.footer-container{
+  grid-template-columns: 2fr 1fr 1fr;
+}
+
+.footer-hanger{
+  top: -12%;
+  grid-template-columns: 1fr 1fr;
+}
+
+.footer-hanger h2{
+  width: 300px;
+}
+  }
+
+
+
+
+
+
+  @media (width<=767px){
+
+    section{
+      padding: 1rem 15vw;
+    }
+
+    .search-cart{
+      display: none;
+    }
+
+    .category-dd{
+     display: none;
+    }
+
+    /* hero section  */
+
+    .hero-container{
+      grid-template-columns: 1fr;
+     /* place-items: center; */
+     gap: 5rem;
+    }
+
+    .hero-container h1{
+      font-size: 2.9rem;
+    }
+
+    .hero-image{
+      width: 100%;
+      height: 450px;
+    }
+
+    .hero-anime{
+      top: 98%;
+      left: 40%;
+    }
+
+    .hero-anime p {
+      font-size: .9rem;
+    }
+
+    /* course category data section  */
+
+    .course-cate-left{
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-bottom: 4rem;
+    }
+
+    .extra-category-cont{
+      grid-template-columns: 1fr;
+    }
+
+     /* service-section  */
+
+     .service-link{
+      width: 40px;
+      height: 40px;
+    }
+
+    .service-icon{
+      font-size: 4rem;
+    }
+
+    .service-article h3{
+      font-size: 1.2rem;
+    }
+
+    .service-article p{
+      font-size: .95rem;
+    }
+
+    .service-text p{
+      font-size: 1rem;
+    }
+
+    .first-icon, .second-icon{
+      font-size: 1.7rem;
+    }
+    
+
+
+    
+   
+     /* course section  */
+     .text-button{
+      gap: 2rem;
+     }
+     .text-button p{
+     font-size: 1rem;
+    }
+
+     .text-button-cont > p{
+      font-size: 1rem; 
+    }
+
+    .courses-cont{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: 4rem;
+    }
+
+    .courses-image{
+      height: 50vh;
+    }
+
+
+    .course-action{
+      width: 100%;
+      left: 0;
+      justify-content: space-between;
+    }
+
+
+
+    /* swiper section  */
+    .mySwiper p{
+      font-size: 1.3rem;
+    }
+
+
+    /* Acheivement section  */
+    .counter-container{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      place-items: center;
+      gap: 3rem;
+    }
+
+    .counter-container span{
+      font-size: 1rem;
+    }
+
+    .counter{
+      font-size: 1.4rem;
+    }
+  
+    .achieve-icon{
+      font-size: 2.7rem;
+    }
+
+    .achievement-container > p{
+      font-size: 1rem;
+    }
+
+    /* footer section  */
+
+    footer h2{
+      font-size: 2rem;
+    }
+
+    .footer-btn{
+      padding: .95rem 1rem 0;
+      width: 220px;
+      height: 70px;
+      text-align: center;
+      font-size: 1.4rem;
+      font-weight: 200;
+    }
+
+    .footer-container{
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-hanger{
+      top: -12%;
+      grid-template-columns: 1fr;
+      gap: .2rem;
+      height: none;
+      padding: 1rem 2rem;
+      width: 65vw;
+      left: 16%;
+    }
+
+    .footer-hanger::after{
+      display: none;
+    }
+
+    .footer-hanger h2{
+      font-size: 4vw;
+      width: 100%;
+    }
+
+    .footer-btn{
+      width: 150px;
+      height: 60px;
+      padding: 1.2rem 0 0;
+      color: var(---bg-dark);
+      background: var(---bg-white);
+      margin-inline: auto;
+      margin: 1rem 0 ; 
+      font-size: 1rem;
+    }
+
+
+  }
+
+
+
+
+  @media (width<=575px){
+
+    section{
+      padding: 1rem 1rem;
+      /* border: 1px solid black; */
+    }
+
+    .container{
+      margin: .1rem auto 5rem;
+      /* border: 1px solid black; */
+    }
+
+    h2{
+      font-size: 2rem;
+    }
+
+    .btn-nav{
+      display: none;
+    }
+
+    /* hero section  */
+
+    .hero-container h1{
+      font-size: 1.75rem;
+    }
+
+    .hero-left p{
+      font-size: 1.25rem;
+    }
+
+    /* course category section  */
+
+    .course-cate-grid{
+      grid-template-columns: 1fr;
+    }
+
+    .course-cate-data{
+      padding-left: 1.5rem;
+    }
+
+
+      /* course section  */
+      .text-button{
+        gap: 1.5rem;
+       }
+       .text-button p{
+       font-size: .7rem;
+      }
+  
+       .text-button-cont > p{
+        font-size: 1rem; 
+      }
+      
+
+    /* service secton */
+    .service-article-cont{
+      grid-template-columns: 1fr;
+      
+    }
+
+    
+  .service-link{
+    top: 90%;
+    left: 8%;
+  }
+
+
+  /* footer section  */
+
+  .footer-container{
+    grid-template-columns: 1fr;
+    gap: .5rem;
+    margin-top: 6rem;
+  }
+
+  .footer-hanger{
+    width: 92vw;
+    left: 3%;
+  }
+
+  .footer-hanger h2{
+    font-size: 1.6rem;
+  }
+
   }

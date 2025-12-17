@@ -70,7 +70,7 @@ let overlay = document.getElementById("page-overlay");
 cartBtn.addEventListener("click", function(event){
   event.preventDefault();
 
-  if (cartSidebar.style.transform = "translate(400px)"){
+  if (cartSidebar.style.transform === "translate(400px)"){
     cartSidebar.style.transform = "translate(0)";
     overlay.style.opacity = "1"
     overlay.style.visibility = "visible"
@@ -249,3 +249,116 @@ function startCounting(el) {
   requestAnimationFrame(update);
 }
 
+
+
+
+
+
+// responsive navigational bar
+// let buttons = document.querySelectorAll(".rspv-dd");
+
+
+// buttons.forEach(function(button){
+//   button.addEventListener("click", function(){
+//     let dropdown = this.nextElementSibling;
+//     let iconDropdown = this.querySelector(".carat-down");
+
+//     dropdown.forEach(function(otherDropdown) {
+//         if (otherDropdown !== dropdown) {
+//           otherDropdown.style.height = "0px";
+//         }
+//       });
+
+//       iconDropdown.forEach(function(otherCaret) {
+//         if (otherCaret !== iconDropdown) {
+//           otherCaret.classList.remove("carat-rotate");
+//         }
+//       });
+
+
+//     if (dropdown.style.height === "0px" || dropdown.style.height === ""){
+//       dropdown.style.height = dropdown.scrollHeight + "px";
+//       dropdown.style.opacity = "1"
+//       iconDropdown.classList.add("carat-rotate");
+
+//     }
+//     else{
+//       dropdown.style.height = "0px";
+//        dropdown.style.opacity = "0"
+//        iconDropdown.classList.remove("carat-rotate");
+//     }
+
+
+//   })
+// })
+
+
+ let buttons = document.querySelectorAll(".rspv-dd");
+
+  buttons.forEach(function(button) {
+    button.addEventListener("click", function () {
+      let currentDropdown = this.nextElementSibling;
+      let currentCaret = this.querySelector(".carat-down");
+
+      // Close all dropdowns except the one being clicked
+      document.querySelectorAll(".rspv-dd-cont").forEach(function(dropdown) {
+        if (dropdown !== currentDropdown) {
+          dropdown.style.height = "0px";
+        }
+      });
+
+      document.querySelectorAll(".carat-down").forEach(function(caret) {
+        if (caret !== currentCaret) {
+          caret.classList.remove("carat-rotate");
+        }
+      });
+
+      // Toggle current dropdown
+      if (currentDropdown.style.height === "0px" || currentDropdown.style.height === "") {
+
+        currentDropdown.style.height = currentDropdown.scrollHeight + "px";
+        currentCaret.classList.add("carat-rotate");
+        currentDropdown.style.opacity = "1";
+
+      } else {
+         currentDropdown.style.height = "0px";
+        currentCaret.classList.remove("carat-rotate");
+         currentDropdown.style.opacity = "0";
+      }
+    });
+  });
+
+  // SLIDE IN EFFECT FOR SIDE RESPONSIVE NAVIGATIONAL BAR
+
+  let rspvHamBtn = document.querySelector(".hamburger-menue");
+  let navSide = document.querySelector(".rspv-nav-bar");
+  let sideCloseBtn = document.querySelector(".expand");
+  let rspvOverlay = document.querySelector(".rspv-page-overlay");
+
+  rspvHamBtn.addEventListener("click", function(event){
+    event.preventDefault()
+    
+    if (navSide.style.right = "-1500px"){
+        navSide.style.right = "0"
+       rspvOverlay.style.opacity = "1"
+       rspvOverlay.style.visibility = "visible"
+    }
+    event.stopPropagation()
+  })
+
+sideCloseBtn.addEventListener("click", function(){
+      navSide.style.right = "-1500px"
+        rspvOverlay.style.opacity = "0"
+        rspvOverlay.style.visibility = "hidden"
+})
+
+  document.addEventListener("click", function(event){
+    if(!rspvHamBtn.contains(event.target) && !navSide.contains(event.target)){
+      event.preventDefault()
+       navSide.style.right = "-1500px"
+        rspvOverlay.style.opacity = "0"
+       rspvOverlay.style.visibility = "hidden"
+    }
+
+    event.stopPropagation()
+  })

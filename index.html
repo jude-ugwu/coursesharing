@@ -96,13 +96,101 @@ href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
             <input type="text" class="nav-input" required placeholder="Search..." id="nav-input">
             <i class="uil uil-shopping-cart-alt" id="cart-btn"></i>
         </div>
-        <a href="#" class="nav-btn">Sign up</a>
+        <a href="#" class="nav-btn btn-nav">Sign up</a>
+        <i class="uil uil-bars hamburger-menue"></i>
+        <!-- <i class="fa-solid fa-bars-staggered hamburger-menue staggered"></i> -->
     </div>
 </div>
         </nav>
 
+
+
+        <!-- RESPONSIVE SLIDE IN NAVIGATIONAL BAR -->
+
+        <div class="rspv-nav-bar">
+            <div class="rspv-nav">
+            <div class="web-logo">
+                <a href=""> <img src="../images/weblogo.png" alt="website logo"></a>
+            </div>
+            <div class="rspv-icon">
+                <div class="expand">
+                <i class="uil uil-times rspv-navbar-icon"></i>
+                <p>Close</p>
+                </div>
+            </div>
+            
+        </div>
+            <ul>
+                <li>
+                    <div class="rspv-dd"><span>HOME </span></div>
+                </li>
+
+                <li>
+                <div class="rspv-dd">
+                    <span>COURSES </span> 
+                    <i class="uil uil-angle-left carat-down"></i>
+                </div>
+                <div class="rspv-dd-cont">
+                    <a class="rspv-nav-link" href="#">All Courses</a>
+                    <a class="rspv-nav-link" href="#">Top Rated</a>
+                    <a class="rspv-nav-link" href="#">New Release</a>
+                    <a class="rspv-nav-link" href="#">Creat & Share Courses</a>
+                </div>
+                </li>
+                
+                <li>
+                    <div class="rspv-dd" >
+                        <span>BLOG </span> 
+                        <i class="uil uil-angle-left carat-down"></i>
+                    </div>
+                <div class="rspv-dd-cont">
+                    <a class="rspv-nav-link" href="#">Blog</a>
+                    <a class="rspv-nav-link" href="#">Blog details</a>
+                </div>
+                </li>
+                
+                <li>
+                    <div class="rspv-dd">
+                        <span>PAGE </span> 
+                        <i class="uil uil-angle-left carat-down"></i>
+                    </div>
+
+                    <div class="rspv-dd-cont">
+                    <a class="rspv-nav-link" href="#" >About</a>
+                    <a class="rspv-nav-link" href="#" >Instructor</a>
+                    <a class="rspv-nav-link" class="rspv-nav-link" href="#" >instructor Details</a>
+                    <a class="rspv-nav-link" href="#" >Event Details</a>
+                    <a class="rspv-nav-link" href="#" >My Cart</a>
+                    <a class="rspv-nav-link" href="#" >My wishList</a>
+                    <a class="rspv-nav-link" href="#" >Check Out</a>
+                    <a class="rspv-nav-link" href="#" >Sign In</a>
+                    <a class="rspv-nav-link" href="#" >Sign Up</a>
+                    <a class="rspv-nav-link" href="#">Error</a>
+                </div>
+                </li>
+                <li>
+                    <div class="rspv-dd">
+                        <span>CONTACT </span> 
+                    </div>
+                </li>
+            </ul>
+
+            
+        <div class="rspv-search-cart" tabindex="1">
+            <input type="text" class="rspv-nav-input" required placeholder="Search...">
+             <i class="fa-solid fa-magnifying-glass rspv-search-icon"></i>
+        </div>
+
+        </div>
+                <div class="rspv-page-overlay"></div>
+
+
+
         <!-- end of navigation section -->
 
+        
+
+        <!-- CART SECTION  -->
 
         <div class="page-overlay" id="page-overlay"></div>
         <div class="cart-sidebar-cont" id="cart-sidebar">
@@ -120,6 +208,8 @@ href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
         </div>
         </div>
 
+        <!-- END OF CART SECTION   -->
+
         <img src="../images/bob1.png" alt="" class="bob">
 
 
@@ -128,7 +218,7 @@ href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
             <div class="hero-container container" >
                 <div class="hero-left">
                     <h1> <span class="hero-less">Access 2700+</span> <br>Online Tutorial From Top Instructors.</h1>
-                    <p>Meet University, and cultural institutions, <br>who'll share their experience.</p>
+                    <p>Meet University, and cultural institutions, who'll share their experience.</p>
                     <a href="#" class="nav-btn hero-btn">View all course</a>
                 </div>
 
@@ -354,7 +444,7 @@ href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 
     <section class="courses-section" id="courses-section">
         <div class="courses-container container">
-            <h2>Find Ther Right <br> Online Course For You</h2>
+            <h2>Find The Right <br> Online Course For You</h2>
             <div class="text-button-cont">
             <p>the right place to Learn, grow and keep getting bettter everyday.</p>
 
@@ -714,6 +804,10 @@ href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 
 <!-- END OF CAURSE SECTION -->
 
+
+
+
+
 <section class="master-section">
     <div class="container master-container">
         <div class="master-left">
@@ -724,6 +818,7 @@ href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
         <article class="banner-info">
             <p>UI/UX <br>Master <br>Course</p>
         </article>
+
         <div class="master-stud-img-cont">
         
         <div class="master-stud-img studone">
@@ -869,16 +964,19 @@ href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
               <p class="counter" data-target="500">0</p>
               <span>Student Enrolled</span>
             </div>
+
             <div>
                 <i class="uil uil-book-open achieve-icon achieve-color-2"></i>
               <p class="counter" data-target="250">0</p>
               <span>Total Courses</span>
             </div>
+
             <div>
                 <i class="uil uil-graduation-cap achieve-icon achieve-color-3"></i>
               <p class="counter" data-target="180">0</p>
               <span>Online Learners</span>
             </div>
+
             <div>
                 <i class="fa-solid fa-earth-africa achieve-icon achieve-color-4"></i>
               <p class="counter" data-target="1200">0</p>
@@ -890,10 +988,12 @@ href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 
 <!-- END OF ACHIVEMENT SECTION -->
 
+
+
 <footer>
     <div class="footer-hanger">
     <div>
-        <h2 style="color: white;">You can be your own <br> Guiding star with our help</h2>
+        <h2>You can be your own <br> Guiding star with our help</h2>
     </div>
         <div class="foot-btn-cont">
             <a href="" class="nav-btn footer-btn">Get started</a>
@@ -964,6 +1064,7 @@ href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
         2025 SkillSwap, All Rights Reserve. Designed By <span>Ugwu Jude</span>
     </small>
 </footer>
+
 
 
 
